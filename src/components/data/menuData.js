@@ -6,6 +6,11 @@ export const menuData = [
     link: "/tutorials",
   },
   { title: "Pricing", icon: "/images/icons/pricing.svg", link: "/pricing" },
+  {
+    title: "Livestreams",
+    icon: "/images/icons/livestreams.svg",
+    link: "/livestreams",
+  },
   { title: "", icon: "/images/icons/search.svg", link: "/search" },
   { title: "", icon: "/images/icons/account.svg", link: "/account" },
 ]
