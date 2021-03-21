@@ -1,6 +1,7 @@
 import React from "react"
-// import { Link } from "gatsby"
 import styled from "styled-components"
+import { themes } from "../styles/ColorStyles"
+import { H1, MediumText } from "../styles/TextStyles"
 function HeroSection() {
   return (
     <Wrapper>
@@ -34,12 +35,7 @@ const TextWrapper = styled.div`
   display: grid;
   gap: 30px;
 `
-const Title = styled.div`
-  font-weight: bold;
-  font-size: 60px;
-  color: white;
+const Title = styled(H1)`
+  color: ${themes.dark.text1};
 `
-const Description = styled.div`
-  font-size: 17px;
-  line-height: 130%;
-`
+const Description = styled(MediumText)``
