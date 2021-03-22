@@ -7,7 +7,7 @@ export default function WaveBackground() {
       <Background></Background>
       <Wave src="/images/waves/hero-wave1.svg" className="wave1" />
       <Wave src="/images/waves/hero-wave2.svg" className="wave2" />
-      <Wave src="/images/waves/hero-wave3.svg" className="wave3" />
+      <BottomWave src="/images/waves/hero-wave3.svg" className="wave3" />
     </Wrapper>
   )
 }
@@ -17,6 +17,10 @@ const Wrapper = styled.div`
 const Wave = styled.img`
   position: absolute;
   z-index: -1;
+
+  @media (min-width: 1440px) {
+    width: 100%;
+  }
   &.wave1 {
     top: 100px;
     filter: blur(60px);
@@ -26,6 +30,11 @@ const Wave = styled.img`
   }
   &.wave3 {
     top: 550px;
+  }
+`
+const BottomWave = styled(Wave)`
+  @media (prefers-color-scheme: dark) {
+    content: url("/images/waves/hero-wave3-dark.svg");
   }
 `
 const Background = styled.div`
